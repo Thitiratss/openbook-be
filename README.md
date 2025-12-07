@@ -91,3 +91,26 @@ PATCH /xxx/:id
 
 DELETE
 DELETE /xxx/:id
+
+✔ include (ดึง relation)
+include: { students: true }
+
+✔ select (เลือกเฉพาะ field)
+select: { id: true, name: true }
+
+✔ where (เงื่อนไข)
+where: { id: 1 }
+
+✔ create
+data: { name: "Alice" }
+
+✔ update
+data: { title: "New title" }
+
+✔ delete
+where: { id: 1 }
+
+✔ pagination
+skip: (page-1)*pageSize,
+take: pageSize
+
