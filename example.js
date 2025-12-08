@@ -50,3 +50,20 @@ export async function findCoursesOfStudent(studentId) {
         }
     });
 }
+
+
+// Customer Error Example:
+async function b(value) {
+    if (value > 0) {
+        return ++value;
+    }
+    try {
+        const data = await fs.readFile('data.txt', 'utf8');
+        return data;
+    } catch (e) {
+        const err =  new Error('File data.txt not found');
+        err.code = 'FILE_NOT_FOUND';
+        err.status = 404;
+        throw err;
+    }
+}
