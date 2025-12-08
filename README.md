@@ -114,3 +114,6 @@ where: { id: 1 }
 skip: (page-1)*pageSize,
 take: pageSize
 
+====================================================================
+DATABASE_URL="mysql://root:mysql%40sit@localhost:3306/classicmodels"
+====================================================================
